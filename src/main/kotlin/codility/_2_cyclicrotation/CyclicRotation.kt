@@ -1,4 +1,4 @@
-package _2_cyclicrotation
+package org.devmike.codility._2_cyclicrotation
 
 
 /**

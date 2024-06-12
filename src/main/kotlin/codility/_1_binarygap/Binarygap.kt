@@ -1,4 +1,4 @@
-package _1_binarygap
+package org.devmike.codility._1_binarygap
 
 /**
  * [problem statement](https://app.codility.com/c/run/trainingBM76B6-7V7/)
