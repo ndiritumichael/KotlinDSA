@@ -74,8 +74,7 @@ class Solution {
 
     }
 }
-
-public fun main(){
+ fun main(){
     val solution = Solution()
     println(solution.binaryGap(89676767))
 }
