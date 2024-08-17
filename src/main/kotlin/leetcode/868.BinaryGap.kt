@@ -77,5 +77,5 @@ class Solution {
 
 public fun main(){
     val solution = Solution()
-    println(solution.binaryGap(8))
+    println(solution.binaryGap(89676767))
 }
