@@ -38,25 +38,27 @@ Constraints:
 0 <= key <= 1000
 0 <= value <= 1000
 
-        */
+ */
 
-class LRUCache(capacity: Int) {
-    private val cache: LinkedHashMap<Int,Int>
+class LRUCache(
+    capacity: Int,
+) {
+    private val cache: LinkedHashMap<Int, Int>
 
     init {
         require(capacity > 0) { "Capacity must be positive" }
-        cache = object : LinkedHashMap<Int, Int>(capacity, 0.75f, true) {
-            override fun removeEldestEntry(eldest: MutableMap.MutableEntry<Int,Int>?): Boolean {
-                return size > capacity
+        cache =
+            object : LinkedHashMap<Int, Int>(capacity, 0.75f, true) {
+                override fun removeEldestEntry(eldest: MutableMap.MutableEntry<Int, Int>?): Boolean = size > capacity
             }
-        }
     }
 
-    fun get(key: Int): Int {
-        return cache[key]?:-1
-    }
+    fun get(key: Int): Int = cache[key] ?: -1
 
-    fun put(key: Int, value: Int) {
+    fun put(
+        key: Int,
+        value: Int,
+    ) {
         cache[key] = value
     }
 
@@ -67,7 +69,7 @@ class LRUCache(capacity: Int) {
     }
 }
 
-fun main(){
+fun main() {
     val cache = LRUCache(2)
     cache.put(1, 10)
     println(cache.get(1))
@@ -82,5 +84,3 @@ fun main(){
     cache.clear()
     println(cache.size())
 }
-
-
