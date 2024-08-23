@@ -21,7 +21,7 @@ int k = removeDuplicates(nums); // Calls your implementation
 
 assert k == expectedNums.length;
 for (int i = 0; i < k; i++) {
- assert nums[i] == expectedNums[i];
+ *assert nums[i] == expectedNums[i];
 }
 If all assertions pass, then your solution will be accepted.
 
