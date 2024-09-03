@@ -74,7 +74,7 @@ class DupsSolution {
 fun main() {
     println(
         DupsSolution().improvedRemoveDuplicates(
-            intArrayOf(1, 1, 1, 2, 2, 3),
+            intArrayOf(0, 0, 1, 1, 1, 2, 2, 3, 3, 4),
         ),
     )
 }
