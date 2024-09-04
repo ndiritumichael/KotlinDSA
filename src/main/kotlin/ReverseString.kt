@@ -11,3 +11,20 @@ fun reverseString(name: String): String {
 
     return String(newString)
 }
+
+fun cheekyReverseString(name: String): String {
+    val newString =
+        CharArray(name.length) {
+            name[it]
+        }
+    val length = name.length - 1
+    val half = name.length / 2
+    for (i in 0 until half) {
+        val temp = name[length - i]
+        val temp2 = name[i]
+        newString[length - i] = temp2
+        newString[i] = temp
+    }
+
+    return String(newString)
+}
